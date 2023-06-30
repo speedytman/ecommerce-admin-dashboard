@@ -41,7 +41,10 @@ export const StoreModal = () => {
 
       const response = await axios.post("/api/stores", values);
 
-      toast.success("Store crated.");
+      //this is used over next router b/c it does a
+      //complete refresh giving the db time and giving
+      //the user a better experience
+      window.location.assign(`/${response.data.id}`);
     } catch (error) {
       toast.error("Something went wrong!");
     } finally {
