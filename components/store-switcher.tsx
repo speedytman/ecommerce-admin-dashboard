@@ -81,7 +81,7 @@ export default function StoreSwitcher({
           <CommandList>
             <CommandInput placeholder="Search store..." />
             <CommandEmpty>No Store Found</CommandEmpty>
-            <CommandGroup heading="Stores">
+            <CommandGroup heading="Your Stores">
               {formatedItems.map((store) => (
                 <CommandItem
                   key={store.value}
